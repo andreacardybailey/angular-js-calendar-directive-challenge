@@ -1,1 +1,55 @@
-/* your css code goes here */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  padding-top: 2rem;
+  color: #222;
+  min-width: 700px;
+}
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+form {
+  background-color: black;
+  padding: .6rem 1rem;
+}
+.calendar {
+  width: 100%;
+  border-left: 1px solid #222;;
+}
+.calendar div.day {
+  height: 2.5rem;
+  text-align: center;
+  font-weight: 600;
+  background-color: #f7b44f;
+}
+.calendar div {
+  float: left;
+  border:1px solid #222;
+  border-left: none;
+  border-top:none;
+  padding: .7rem;
+  width:14.28%;
+  height: 7rem;
+}
+.disabled {
+  background-color: #ccc;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */

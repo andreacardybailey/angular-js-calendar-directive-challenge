@@ -1,0 +1,29 @@
+<form class="date-picker">
+  <select 
+    ng-model="months.value" 
+    ng-options="month for month in months.values"
+    ng-change="updateCalRange()"
+  >
+  </select>
+  <select 
+    ng-model="years.value" 
+    ng-options="year for year in years.values"
+    ng-change="updateCalRange()"
+  >
+  </select>
+</form>
+<section class="calendar clearfix">
+  <div class="day">Sunday</div>
+  <div class="day">Monday</div>
+  <div class="day">Tuesday</div>
+  <div class="day">Wednesday</div>
+  <div class="day">Thursday</div>
+  <div class="day">Friday</div>
+  <div class="day">Saturday</div>
+  <div 
+    ng-repeat="day in calRange.days"
+    ng-class="{disabled:!isCurrentMonth($index)}"
+  >
+    {{day.day}}
+  </div>
+</section>
