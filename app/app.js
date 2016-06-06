@@ -7,7 +7,6 @@ app.directive('calendar', function(){
     templateUrl: 'calendar.html',
     controller: function($scope, $element, $attrs) {
       $scope.calRange = CalendarRange.getMonthlyRange(new Date());
-      console.log($scope.calRange);
 
       var now = new Date;
       var currentMonth = now.getMonth();
